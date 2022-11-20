@@ -1,9 +1,17 @@
-import React, {Component, Fragment} from 'react'
-import {connect} from 'react-redux'
-import {withRouter, Route, Switch, Redirect} from 'react-router-dom'
+import React, {Component, Fragment} from 'react';
+import {connect} from 'react-redux';
+import {withRouter, Route, Switch, Redirect} from 'react-router-dom';
 import { Login, Signup } from './components/AuthForm';
 import Home from './components/Home';
-import {me} from './store'
+import {me} from './store';
+// import HamstringMeasurement from './components/HamstringMeasurement';
+// import QuadMeasurement from './components/QuadMeasurement';
+import HamstringMeasurementResults from './components/HamstringMeasurementResults';
+import HamstringInput from './components/HamstringInput';
+import ShoulderInput from './components/ShoulderInput';
+import ShoulderMeasurementResults from './components/ShoulderMeasurementResults';
+import Measurements from './components/Measurements';
+import MeasurementResults from './components/MeasurementResults'
 
 /**
  * COMPONENT
@@ -20,7 +28,14 @@ class Routes extends Component {
       <div>
         {isLoggedIn ? (
           <Switch>
-            <Route path="/home" component={Home} />
+            <Route exact path="/home" component={Home} />
+            {/* <Route path="/measurements/1" component={HamstringMeasurement} /> */}
+            <Route exact path="/measurements/hamstring" component={HamstringInput} />
+            <Route exact path="/measurements/hamstringresults" component={HamstringMeasurementResults} />
+            <Route exact path="/measurements/shoulder" component={ShoulderInput} />
+            <Route exact path="/measurements/shoulderresults" component={ShoulderMeasurementResults} />
+            <Route exact path="/measurements/results" component={MeasurementResults} />
+            <Route exact path="/measurements" component={Measurements} />
             <Redirect to="/home" />
           </Switch>
         ) : (

@@ -14,6 +14,15 @@ const User = db.define('user', {
   },
   password: {
     type: Sequelize.STRING,
+    allowNull: false
+  },
+  gender: {
+    type: Sequelize.ENUM('MALE', 'FEMALE', 'TRANSGENDER', 'NON-BINARY'),
+    allowNull: true
+  },
+  birthdate: {
+    type: Sequelize.DATE,
+    allowNull: true
   }
 })
 

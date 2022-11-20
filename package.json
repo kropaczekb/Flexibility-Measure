@@ -20,6 +20,7 @@
   "author": "Fullstack Academy of Code",
   "license": "MIT",
   "dependencies": {
+    "@cubejs-client/core": "^0.31.15",
     "@mediapipe/pose": "~0.4.0",
     "@tensorflow-models/pose-detection": "^2.0.0",
     "@tensorflow/tfjs-backend-wasm": "^3.13.0",
@@ -28,11 +29,14 @@
     "@tensorflow/tfjs-core": "^3.13.0",
     "axios": "^0.21.1",
     "bcrypt": "^5.0.0",
+    "chart": "^0.1.2",
+    "chart.js": "^4.0.1",
     "compression": "^1.7.3",
     "express": "^4.16.4",
     "history": "^4.9.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
+    "parcel": "^2.8.0",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5",
     "yarn": "^1.22.19"
